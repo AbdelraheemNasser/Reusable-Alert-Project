@@ -1,0 +1,29 @@
+@mixin DRY($name,$boarderColor,$backGroudColor)
+{
+    .#{$name}
+    {
+        border: 1px solid  $boarderColor; //HERE IS THE BOARDER COLOR
+        background-color: $backGroudColor; //HERE IS THE BACKGROUD COLOR 
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 16px 16px 8px;
+        font-weight: 500;
+        max-width: 600px;
+        margin-bottom: 20px;
+        .Alert-header
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        .First-paraghrap
+        {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+    }
+    }
+}
+
+@include DRY('info',white ,rgb(97, 209, 130) );
+@include DRY('REJECT',white ,rgb(216, 94, 85) );
